@@ -109,6 +109,9 @@
   padding-left: 0;
   padding-right: 0;
   .box-sizing(border-box);
+  // Fix IE7 problems with width:100%
+  *width: ~"expression((this.parentNode.clientWidth - parseInt(this.currentStyle['paddingLeft']) - parseInt(this.currentStyle['paddingRight'])) +'px')";
+  *margin-left:0;
 }
 
 // Vertically space out multiple block buttons
